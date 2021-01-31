@@ -1,8 +1,7 @@
 // Exercise 10, Extra Credit 4:
-// Convert this switch-statement to an if-statement. Which do you like better?
+// Convert the switch-statement to an if-statement. Which do you like better?
 #include <stdio.h>
 
-// I'm aware there's a standard library tolower function, but the point is education.
 char to_lower(char c)
 {
     if ('Z' >= c && c >= 'A') {
@@ -10,7 +9,6 @@ char to_lower(char c)
     }
     return c;
 }
-
 
 int main(int argc, char *argv[])
 {
@@ -25,9 +23,9 @@ int main(int argc, char *argv[])
     char letter;
 
     for (l = 1; l < argc; l++) {
-        for (i = 0, letter = to_lower(argv[1][i]);
-                argv[1][i] != '\0';
-                i++, letter = to_lower(argv[1][i])
+        for (i = 0, letter = to_lower(argv[l][i]);
+                argv[l][i] != '\0';
+                i++, letter = to_lower(argv[l][i])
                 ) {
 
             if (letter == 'a') {
@@ -54,3 +52,5 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+
+// Definitely the if statement.

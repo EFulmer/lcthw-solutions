@@ -1,5 +1,13 @@
-// Exercise 10, Extra Credit 3:
-// Make it handle all of the arguments you pass it with yet another for-loop.
+// Exercise 10, Extra Credit 5:
+// In the case for 'Y' I have the break outside of the if-statement.
+// What's the impact of this, and what happens if you move it inside of the if-statement.
+// Prove to yourself that you're right.
+//
+// Answer: What happens if the break is inside of that if-statement, is that if
+// 'Y' is the first letter of the word it'll be printed with "not a vowel."
+// The way 'Y' is handled should probably be completely different, but I don't
+// know the technical aspects of English grammar well enough to handle every
+// case when 'Y' is a consonant and when it is a vowel.
 #include <stdio.h>
 
 // I'm aware there's a standard library tolower function, but the point is education.
@@ -55,8 +63,8 @@ int main(int argc, char *argv[])
                     if (i > 2) {
                         // it's only sometimes Y
                         printf("%d, %d: 'y'\n", l, i);
+                        break;
                     }
-                    break;
 
                 default:
                     printf("%d, %d: %c is not a vowel\n", l, i, letter);
