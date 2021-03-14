@@ -24,3 +24,12 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+
+// How to Break It #3:
+// Set `num_states` wrong so that it's a higher value and see what it does.
+//
+// Answer: At 5, it prints out "state 4: NULL" (null char there not the string NULL).
+// Any higher and there's a segmentation fault after state 4.
+// I assume the compiler arranges memory so that there's some padding at the
+// beginning and end of the program's memory block, and going past that is
+// what causes the segfault.
